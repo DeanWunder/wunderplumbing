@@ -1,3 +1,6 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 #topbar {
     background: #19277f;
     padding: 10px;
@@ -8,6 +11,7 @@
     margin: 0 auto;
     font-family: 'Heebo', sans-serif;
     text-transform: uppercase;
+    text-align: center;
 }
 #topbar h2 {
     color: #3379d0;
@@ -15,6 +19,7 @@
     font-family: 'Heebo', sans-serif;
     text-transform: uppercase;
     font-size: 16px;
+    text-align: center;
 }
 #topbar img {
     display: block;
@@ -24,4 +29,21 @@
     display: flex;
     align-items: center;
 }
-
+.box {
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.2);
+    margin: 15px;
+    padding: 15px;
+}
+#call-to-action h1 {
+    font-size: 2em;
+}
+#call-to-action h2 {
+    font-size: 1.5em;
+}
+.instagram-picture {
+    width: 100%;
+}
+.instagram-caption {
+    margin: 10px;
+}
