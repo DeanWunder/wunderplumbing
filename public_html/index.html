@@ -14,6 +14,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+        <!-- Masonry -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
         <!-- Custom CSS/JS -->
         <link rel="stylesheet" type="text/css" href="index.css">
         <script src="instagram-feed.js"></script>
@@ -34,16 +38,19 @@
         </div>
         <div class="container-fluid">
             <div class="box" id="call-to-action">
-                <h1>Need Plumbing Help?</h1>
+                <h3>Need plumbing in Sydney?</h3>
                 <h2>Call us: 0431 964 072</h2>
             </div>
-        </div>
-        <div class="container-fluid" id="instagram-container">
+            <div class="grid" id="instagram-container">
+            </div>
         </div>
         <template id="instagram-post">
-            <div class="box instagram">
-                <img class="instagram-picture">
-                <p class="instagram-caption"></p>
+            <div class="grid-item col-lg-3 col-md-4 col-sm-6">
+                <div class="box instagram">
+                    <img class="instagram-picture">
+                    <small class="datetime"></small>
+                    <p class="instagram-caption"></p>
+                </div>
             </div>
         </template>
     </body>

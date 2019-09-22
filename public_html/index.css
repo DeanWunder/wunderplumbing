@@ -32,18 +32,24 @@ body {
 .box {
     border: 1px solid #aaa;
     box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.2);
-    margin: 15px;
+    margin: 10px;
     padding: 15px;
 }
-#call-to-action h1 {
-    font-size: 2em;
+#call-to-action h3 {
+    font-size: 1.4em;
+    text-align: center;
 }
 #call-to-action h2 {
-    font-size: 1.5em;
+    font-size: 2em;
+    text-align: center;
 }
 .instagram-picture {
     width: 100%;
 }
 .instagram-caption {
-    margin: 10px;
+    margin: 10px 0;
+}
+.grid-item {
+    padding: 0;
+    display: inline-block;
 }
