@@ -3,8 +3,10 @@ body {
 }
 #topbar {
     background: #19277f;
-    padding: 10px;
     border-bottom: 10px solid #dbe9ff;
+}
+#topbar > div.row {
+    padding: 10px 0;
 }
 #topbar h1 {
     color: #dbe9ff;
