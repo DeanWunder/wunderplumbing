@@ -1,4 +1,4 @@
-let instagram_url = "https://www.instagram.com/graphql/query/?query_id=17888483320059182&id=11617191838&first=999999"
+let instagram_url = "https://wunderplumbing.com.au/feed.json"
 $.getJSON(instagram_url, function(data) {
     let edges = data.data.user.edge_owner_to_timeline_media.edges;
     edges.forEach(function(edge) {
