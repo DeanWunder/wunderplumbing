@@ -10,8 +10,8 @@ $.getJSON(instagram_url, function(data) {
             day: 'numeric'
         }));
         // add the src to the image tag
-        post.find('.instagram-picture').attr('src', 'img/' + post.image_url);
-        post.find('.instagram-caption').text(post.caption);
+        htmlPost.find('.instagram-picture').attr('src', 'img/' + post.image_url);
+        htmlPost.find('.instagram-caption').text(post.caption);
 
         $('#instagram-container').append(post);
 		
