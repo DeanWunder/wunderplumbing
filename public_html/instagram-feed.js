@@ -13,7 +13,7 @@ $.getJSON(instagram_url, function(data) {
         htmlPost.find('.instagram-picture').attr('src', 'img/' + post.image_url);
         htmlPost.find('.instagram-caption').text(post.caption);
 
-        $('#instagram-container').append(post);
+        $('#instagram-container').append(htmlPost);
 		
 	});
     initMasonry();
