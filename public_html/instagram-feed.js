@@ -18,3 +18,15 @@ $.getJSON(instagram_url, function(data) {
 	});
     initMasonry();
 });
+
+function initMasonry() {
+    $(document).ready(function() {
+        $('.grid').imagesLoaded(function () {
+            console.log('images loaded');
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+            });
+        });
+    });
+}
