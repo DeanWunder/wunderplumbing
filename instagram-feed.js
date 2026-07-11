@@ -1,4 +1,4 @@
-let instagram_url = "/feed.json":
+let instagram_url = "/feed.json";
 $.getJSON(instagram_url, function(data) {
 	data.forEach(function(post) {
 		let htmlPost = $($('template#instagram-post').html());
