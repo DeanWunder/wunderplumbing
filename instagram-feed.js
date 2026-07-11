@@ -1,4 +1,4 @@
-let instagram_url = "https://wunderplumbing.com.au/instagram_downloaded.json"
+let instagram_url = "https://wunderplumbing.com.au/feed.json"
 $.getJSON(instagram_url, function(data) {
 	data.forEach(function(post) {
 		let htmlPost = $($('template#instagram-post').html());
