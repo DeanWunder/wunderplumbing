@@ -256,9 +256,16 @@ section {
     box-shadow: var(--shadow-hover);
 }
 .trust-card i {
+    flex: 0 0 40px;
+    width: 40px;
     font-size: 28px;
+    text-align: center;
     color: var(--blue);
     margin-top: 4px;
+}
+.trust-card-content {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 .trust-card h3 {
     font-family: 'Heebo', sans-serif;
@@ -353,6 +360,18 @@ section {
 .instagram-more-wrap {
     text-align: center;
     margin-top: 20px;
+}
+/* Single column below md (mobile, unchanged). From md up to lg the
+   grid is still single column, so shrink+center each embed to ~50%
+   of the page instead of letting it stretch full-width. At xl the
+   grid switches to a real 2-up layout (col-xl-6), which already
+   gives each embed ~50% width, so the extra shrink is skipped there. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .box.instagram {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* ---------- Contact ---------- */
