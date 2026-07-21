@@ -1,9 +1,9 @@
 let instagram_url = "/feed.json";
 $.getJSON(instagram_url, function(data) {
-    console.log(data);
-	data.forEach(function(post) {
+	data.data.user.edge_owner_to_timeline_media.edges.forEach(function(edge) {
+        console.log(edge);
 		let htmlPost = $($('template#instagram-post').html());
-		let date = new Date(1000*post.date);
+		let date = new Date(1000 * edge.node.taken_at_timestamp);
 		htmlPost.find('.datetime').text(date.toLocaleDateString(undefined, {
             weekday: 'long',
             year: 'numeric',
@@ -11,8 +11,8 @@ $.getJSON(instagram_url, function(data) {
             day: 'numeric'
         }));
         // add the src to the image tag
-        htmlPost.find('.instagram-picture').attr('src', 'img/' + post.image_url);
-        htmlPost.find('.instagram-caption').text(post.caption);
+        htmlPost.find('.instagram-picture').attr('src', edge.node.display_url);
+        htmlPost.find('.instagram-caption').text(edge.node.edge_media_to_caption.edges[0].node);
 
         $('#instagram-container').append(htmlPost);
 		
