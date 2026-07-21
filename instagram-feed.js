@@ -1,5 +1,6 @@
 let instagram_url = "/feed.json";
 $.getJSON(instagram_url, function(data) {
+    console.log(data);
 	data.forEach(function(post) {
 		let htmlPost = $($('template#instagram-post').html());
 		let date = new Date(1000*post.date);
