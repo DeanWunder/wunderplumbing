@@ -334,6 +334,26 @@ section {
 .instagram-caption {
     margin: 10px 0;
 }
+.box.instagram {
+    padding: 8px;
+    overflow: hidden;
+}
+/* Instagram's embed sets a fixed inline min-width (326px) on the
+   blockquote/iframe, which overflows its column on narrow phones.
+   Force it responsive instead. */
+.box.instagram .instagram-media,
+.box.instagram iframe {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+#instagram-container template {
+    display: none;
+}
+.instagram-more-wrap {
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* ---------- Contact ---------- */
 #contact {
