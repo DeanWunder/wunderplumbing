@@ -26,6 +26,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+        <!-- Font Awesome (icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="index.css">
 
@@ -38,25 +41,223 @@
         <link rel="manifest" href="/site.webmanifest" />
     </head>
     <body>
-        <div id="topbar" class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-auto topbar-col">
-                    <img src="drop.png" height="70">
-                </div>
-                <div class="col-lg-auto topbar-col">
-                    <h1>Wunder Plumbing</h1>
-                </div>
-                <div class="col-lg-auto topbar-col">
-                    <h2>Licensed Plumbers, Drainers & Gasfitters</h2>
+        <header id="topbar">
+            <div class="container-fluid">
+                <div class="row align-items-center no-gutters">
+                    <div class="col-lg-auto topbar-col">
+                        <img src="drop.png" height="60">
+                    </div>
+                    <div class="col-lg-auto topbar-col topbar-brand">
+                        <h1>Wunder Plumbing</h1>
+                        <h2>Licensed Plumbers, Drainers &amp; Gasfitters</h2>
+                    </div>
+                    <div class="col-lg topbar-col d-none d-lg-flex">
+                        <nav id="main-nav">
+                            <a href="#services">Services</a>
+                            <a href="#why-us">Why Us</a>
+                            <a href="#service-area">Service Area</a>
+                            <a href="#gallery">Gallery</a>
+                            <a href="#reviews">Reviews</a>
+                            <a href="#contact">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="col-lg-auto topbar-col">
+                        <a class="btn-cta btn-cta-sm" href="tel:0431964072"><i class="fa-solid fa-phone"></i> 0431 964 072</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
+
+        <section id="hero">
+            <div class="container-fluid">
+                <p class="hero-eyebrow">Hills District &amp; Greater Sydney</p>
+                <h2 class="hero-title">Plumbing done right, the first time.</h2>
+                <p class="hero-subtitle">Blocked drains, hot water systems, gas fitting, and everything in between &mdash; fast, friendly and fully licensed. Servicing Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and all of Sydney.</p>
+                <div class="hero-cta">
+                    <a class="btn-cta" href="tel:0431964072"><i class="fa-solid fa-phone"></i> Call Jason Now</a>
+                    <a class="btn-cta btn-cta-outline" href="#contact"><i class="fa-regular fa-envelope"></i> Get a Free Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <main>
         <div class="container-fluid">
-            <div class="box" id="call-to-action">
-                <h3>A small plumbing business servicing The Hills District and surrounding areas.</h3>
-		<h2>Call Jason<br>0431 964 072</h2>
-            </div>
-            <div class="row" id="instagram-container">
+            <section id="services">
+                <h2 class="section-heading">Our Services</h2>
+                <p class="section-subheading">A full range of residential and commercial plumbing services, backed by honest advice and tidy workmanship. (Filler copy &mdash; to be replaced.)</p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-water"></i></div>
+                            <h3>Blocked Drains</h3>
+                            <p>Fast, reliable clearing of blocked and slow drains using modern equipment, with minimal mess.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-fire-flame-simple"></i></div>
+                            <h3>Hot Water Systems</h3>
+                            <p>Supply, repair, and replacement of gas, electric, and solar hot water systems.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+                            <h3>Leak Detection &amp; Repair</h3>
+                            <p>Pinpointing hidden leaks early to protect your home and keep water bills down.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-fire"></i></div>
+                            <h3>Gas Fitting</h3>
+                            <p>Licensed gas fitting for appliances, cooktops, heaters, and new gas connections.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-shower"></i></div>
+                            <h3>Bathroom Renovations</h3>
+                            <p>End-to-end plumbing for bathroom and kitchen renovations, big or small.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                            <h3>Emergency Plumbing</h3>
+                            <p>Burst pipe or overflowing toilet? We offer fast-response emergency callouts.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                            <h3>Backflow Prevention</h3>
+                            <p>Installation, testing, and certification of backflow prevention devices.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="box service-card">
+                            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <h3>General Maintenance</h3>
+                            <p>Taps, toilets, valves, and everything else on your plumbing to-do list.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="why-us">
+                <h2 class="section-heading">Why Choose Wunder Plumbing</h2>
+                <p class="section-subheading">A small, local business that treats every job like it's in our own home. (Filler copy &mdash; to be replaced.)</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box trust-card">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>Licensed &amp; Insured</h3>
+                            <p>Fully licensed plumbing, drainage, and gasfitting work, backed by insurance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box trust-card">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <h3>Locally Owned</h3>
+                            <p>Based in the Hills District and proud to support the local community.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box trust-card">
+                            <i class="fa-solid fa-tag"></i>
+                            <h3>Upfront Pricing</h3>
+                            <p>No surprises &mdash; you'll always know the cost before we start work.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box trust-card">
+                            <i class="fa-solid fa-clock"></i>
+                            <h3>On-Time, Every Time</h3>
+                            <p>We respect your schedule and turn up when we say we will.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box trust-card">
+                            <i class="fa-solid fa-broom"></i>
+                            <h3>Clean &amp; Tidy</h3>
+                            <p>We leave every job site as clean as we found it, or cleaner.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box trust-card">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <h3>Satisfaction Guaranteed</h3>
+                            <p>We're not done until you're happy with the work.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="service-area">
+                <h2 class="section-heading">Proudly Servicing All of Sydney</h2>
+                <p class="section-subheading">From the Hills District to the harbour, no job is too far. (Filler copy &mdash; to be replaced.)</p>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="box map-box">
+                            <iframe
+                                src="https://www.google.com/maps?q=Sydney+NSW,+Australia&z=9&output=embed"
+                                width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Map of Sydney service area">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="service-area-list">
+                            <li><i class="fa-solid fa-location-dot"></i> Castle Hill</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Kellyville</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Rouse Hill</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Baulkham Hills</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Hornsby</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Galston &amp; Dural</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Parramatta</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Sydney CBD &amp; beyond</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reviews">
+                <h2 class="section-heading">What Our Customers Say</h2>
+                <p class="section-subheading">Placeholder testimonials &mdash; to be replaced with real customer reviews.</p>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="box review-card">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Jason turned up on time and fixed our hot water system the same day. Couldn't recommend Wunder Plumbing more.&rdquo;</p>
+                            <p class="review-author">Sarah T. &mdash; Castle Hill</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box review-card">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Professional, tidy, and upfront about pricing before starting any work. Exactly what you want from a tradie.&rdquo;</p>
+                            <p class="review-author">Michael R. &mdash; Kellyville</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box review-card">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>&ldquo;Called about a blocked drain on a Sunday and had someone out within the hour. Lifesavers.&rdquo;</p>
+                            <p class="review-author">Priya K. &mdash; Rouse Hill</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery">
+                <h2 class="section-heading">Recent Work</h2>
+                <p class="section-subheading">Follow <a href="https://www.instagram.com/wunderplumbing/" target="_blank" rel="noopener">@wunderplumbing</a> on Instagram for more.</p>
+                <div class="row" id="instagram-container">
             <div class="grid-item col-lg-3 col-md-4 col-sm-6">
                 <div class="box instagram">
                     <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CLklRvBljwX/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CLklRvBljwX/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CLklRvBljwX/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Jason Wunder (@wunderplumbing)</a></p></div></blockquote>
@@ -257,8 +458,88 @@
                     <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Bu8iTFUFadV/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/Bu8iTFUFadV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Bu8iTFUFadV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Jason Wunder (@wunderplumbing)</a></p></div></blockquote>
                 </div>
             </div>
-            </div>
-            <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </section>
         </div>
+        </main>
+
+        <section id="contact">
+            <div class="container-fluid">
+                <h2 class="section-heading light">Get In Touch</h2>
+                <p class="section-subheading light">Send us your details and we'll get back to you as soon as we can. (Filler copy &mdash; to be replaced.)</p>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <ul class="contact-info">
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:0431964072">0431 964 072</a></li>
+                            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@wunderplumbing.com.au">info@wunderplumbing.com.au</a></li>
+                            <li><i class="fa-solid fa-location-dot"></i> Hills District, Sydney NSW</li>
+                            <li><i class="fa-solid fa-clock"></i> 7 days a week, emergency callouts available</li>
+                            <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/wunderplumbing/" target="_blank" rel="noopener">@wunderplumbing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="box contact-form" action="mailto:info@wunderplumbing.com.au" method="post" enctype="text/plain">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-name">Name</label>
+                                    <input type="text" class="form-control" id="contact-name" name="Name" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-phone">Phone</label>
+                                    <input type="tel" class="form-control" id="contact-phone" name="Phone" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input type="email" class="form-control" id="contact-email" name="Email" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-suburb">Suburb</label>
+                                    <input type="text" class="form-control" id="contact-suburb" name="Suburb">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">How can we help?</label>
+                                <textarea class="form-control" id="contact-message" name="Message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-cta">Send Message</button>
+                            <p class="contact-form-note">Clicking send will open your email app with your message pre-filled.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="site-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Wunder Plumbing</h3>
+                        <p>Licensed plumbers, drainers &amp; gasfitters servicing the Hills District and all of Sydney.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Quick Links</h3>
+                        <nav class="footer-nav">
+                            <a href="#services">Services</a>
+                            <a href="#why-us">Why Us</a>
+                            <a href="#service-area">Service Area</a>
+                            <a href="#gallery">Gallery</a>
+                            <a href="#reviews">Reviews</a>
+                            <a href="#contact">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Contact</h3>
+                        <p><i class="fa-solid fa-phone"></i> <a href="tel:0431964072">0431 964 072</a></p>
+                        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@wunderplumbing.com.au">info@wunderplumbing.com.au</a></p>
+                        <p><a href="https://www.instagram.com/wunderplumbing/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @wunderplumbing</a></p>
+                    </div>
+                </div>
+                <hr>
+                <p class="footer-copyright">&copy; 2026 Wunder Plumbing. All rights reserved.</p>
+            </div>
+        </footer>
     </body>
 </html>
