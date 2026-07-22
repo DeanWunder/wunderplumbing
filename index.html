@@ -5,6 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A small plumbing business in Northwestern Sydney. Call us if you need plumbing in Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and surrounding areas.">
         <title>Wunder Plumbing - Hills District Plumbing, Drainage &amp; Gasfitting</title>
+        <link rel="canonical" href="https://wunderplumbing.com.au/">
+
+        <!-- Open Graph / social sharing -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Wunder Plumbing">
+        <meta property="og:title" content="Wunder Plumbing - Hills District Plumbing, Drainage &amp; Gasfitting">
+        <meta property="og:description" content="A small plumbing business in Northwestern Sydney. Call us if you need plumbing in Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and surrounding areas.">
+        <meta property="og:url" content="https://wunderplumbing.com.au/">
+        <meta property="og:image" content="https://wunderplumbing.com.au/web-app-manifest-512x512.png">
+        <meta property="og:locale" content="en_AU">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Wunder Plumbing - Hills District Plumbing, Drainage &amp; Gasfitting">
+        <meta name="twitter:description" content="A small plumbing business in Northwestern Sydney. Call us if you need plumbing in Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and surrounding areas.">
+        <meta name="twitter:image" content="https://wunderplumbing.com.au/web-app-manifest-512x512.png">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150918718-1"></script>
 	<script>
@@ -16,15 +31,12 @@
 	</script>
 
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Heebo:900&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Heebo:900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <!-- Bootstrap -->
+        <!-- Bootstrap (CSS only - the JS bundle and jQuery were unused, no Bootstrap
+             JS components (modal/dropdown/collapse) or jQuery calls appear anywhere) -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <!-- Font Awesome (icons) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -39,13 +51,41 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Wunder Plumbing" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <!-- Structured data for local search -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Plumber",
+            "name": "Wunder Plumbing",
+            "image": "https://wunderplumbing.com.au/web-app-manifest-512x512.png",
+            "url": "https://wunderplumbing.com.au/",
+            "telephone": "+61431964072",
+            "email": "jason@wunderplumbing.com.au",
+            "sameAs": [
+                "https://www.instagram.com/wunderplumbing/"
+            ],
+            "areaServed": [
+                "Castle Hill", "Kellyville", "Rouse Hill", "Kellyville Ridge",
+                "Beaumont Hills", "Box Hill", "Riverstone", "Schofields",
+                "Stanhope Gardens", "Baulkham Hills", "Hornsby", "Galston",
+                "Dural", "Arcadia", "Parramatta", "Sydney"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Sydney",
+                "addressRegion": "NSW",
+                "addressCountry": "AU"
+            }
+        }
+        </script>
     </head>
     <body>
         <header id="topbar">
             <div class="container-fluid">
                 <div class="row align-items-center no-gutters topbar-row">
                     <div class="topbar-col topbar-brand-row">
-                        <img src="drop.png" height="60">
+                        <img src="drop.png" height="60" alt="Wunder Plumbing logo">
                         <div class="topbar-brand">
                             <h1>Wunder Plumbing</h1>
                             <h2>Licensed Plumbing, Drainage &amp; Gasfitting</h2>
@@ -484,7 +524,7 @@
                 <div class="instagram-more-wrap">
                     <button type="button" class="btn-cta" id="instagram-show-more">Show More Photos</button>
                 </div>
-                <script async src="//www.instagram.com/embed.js"></script>
+                <script async src="https://www.instagram.com/embed.js"></script>
                 <script src="instagram-feed.js"></script>
             </section>
         </div>

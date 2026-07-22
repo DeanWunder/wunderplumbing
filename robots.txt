@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wunderplumbing.com.au/sitemap.xml
