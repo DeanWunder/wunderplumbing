@@ -15,6 +15,12 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Offsets anchor-link scrolling so section headings land below the
+       sticky header instead of underneath it. */
+    scroll-padding-top: 96px;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--text);
@@ -41,9 +47,25 @@ a {
     align-items: center;
     padding: 6px 14px;
 }
+/* Brand and phone button size to their content and only wrap onto
+   their own line once they no longer both fit (rather than switching
+   at a fixed breakpoint), keeping the phone button pinned to the
+   right for as long as there's room. */
+.topbar-row {
+    justify-content: space-between;
+    row-gap: 6px;
+}
+.topbar-brand-row,
+.topbar-phone-col {
+    flex: 0 0 auto;
+}
+.topbar-brand-row {
+    gap: 14px;
+}
 .topbar-brand {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start !important;
+    align-items: flex-start;
 }
 #topbar h1 {
     color: var(--white);
@@ -78,6 +100,29 @@ a {
 }
 #main-nav a:hover {
     color: var(--white);
+}
+/* At lg+ the nav is visible and should always share the row with the
+   brand and phone button rather than wrapping the button below. */
+@media (min-width: 992px) {
+    .topbar-row {
+        flex-wrap: nowrap;
+    }
+    .topbar-nav-col {
+        min-width: 0;
+    }
+}
+/* Between lg and xl there isn't quite enough room for the nav at its
+   full size, so tighten it up just in that range. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #topbar .topbar-col {
+        padding: 6px 8px;
+    }
+    #main-nav {
+        gap: 10px;
+    }
+    #main-nav a {
+        font-size: 12px;
+    }
 }
 
 /* ---------- Buttons ---------- */
@@ -451,9 +496,20 @@ section {
 #site-footer a:hover {
     color: var(--white);
 }
+.footer-contact-col i {
+    padding-right: 5px;
+}
 #site-footer hr {
     border-color: rgba(255, 255, 255, 0.15);
     margin: 30px 0 16px;
+}
+/* Footer columns are col-md-4, so they stack to a single column
+   below 768px. Give the Contact column's heading extra breathing
+   room from the column above it only in that stacked layout. */
+@media (max-width: 767.98px) {
+    .footer-contact-col h3 {
+        margin-top: 20px;
+    }
 }
 .footer-copyright {
     text-align: center;
@@ -470,7 +526,6 @@ section {
         padding: 50px 16px;
     }
     .service-area-list {
-        grid-template-columns: 1fr;
         margin-top: 24px;
     }
 }
