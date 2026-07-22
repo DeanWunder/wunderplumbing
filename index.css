@@ -24,7 +24,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--text);
-    background: var(--ice-blue);
+    background: var(--navy-dark);
     margin: 0;
 }
 
@@ -259,6 +259,9 @@ section {
 }
 
 /* ---------- Services ---------- */
+#services {
+    background: var(--ice-blue);
+}
 .service-card {
     text-align: center;
     height: calc(100% - 24px);
@@ -290,6 +293,9 @@ section {
 }
 
 /* ---------- Why us ---------- */
+#why-us {
+    background: var(--ice-blue);
+}
 .trust-card {
     display: flex;
     align-items: flex-start;
@@ -325,6 +331,9 @@ section {
 }
 
 /* ---------- Service area ---------- */
+#service-area {
+    background: var(--ice-blue);
+}
 .map-box {
     padding: 12px;
     overflow: hidden;
@@ -380,6 +389,9 @@ section {
 }
 
 /* ---------- Instagram gallery ---------- */
+#gallery {
+    background: var(--ice-blue);
+}
 .instagram-picture {
     width: 100%;
 }
