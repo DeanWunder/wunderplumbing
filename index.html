@@ -92,19 +92,29 @@
                             <h2>Licensed Plumbing, Drainage &amp; Gasfitting</h2>
                         </div>
                     </div>
-                    <div class="col-lg topbar-col topbar-nav-col d-none d-lg-flex">
-                        <nav id="main-nav">
-                            <a href="#services">Services</a>
-                            <a href="#why-us">Why Us</a>
-                            <a href="#service-area">Service Area</a>
-                            <a href="#gallery">Gallery</a>
-                            <!-- <a href="#reviews">Reviews</a> -->
-                            <a href="#contact">Contact</a>
-                        </nav>
-                    </div>
                     <div class="topbar-col topbar-phone-col">
-                        <a class="btn-cta btn-cta-sm" href="tel:0431964072"><i class="fa-solid fa-phone"></i> 0431 964 072</a>
+                        <a class="btn-cta btn-cta-sm" href="tel:0431964072"><i class="fa-solid fa-phone"></i> <span class="phone-number-text">0431 964 072</span></a>
                     </div>
+                </div>
+            </div>
+            <div id="nav-band">
+                <div class="container-fluid">
+                    <nav id="main-nav" class="d-none d-lg-flex">
+                        <a href="#services">Services</a>
+                        <a href="#why-us">Why Us</a>
+                        <a href="#service-area">Service Area</a>
+                        <a href="#gallery">Gallery</a>
+                        <!-- <a href="#reviews">Reviews</a> -->
+                        <a href="#contact">Contact</a>
+                    </nav>
+                    <nav id="mobile-nav" class="d-lg-none">
+                        <a href="#services">Services</a>
+                        <a href="#why-us">Why Us</a>
+                        <a href="#service-area">Service Area</a>
+                        <a href="#gallery">Gallery</a>
+                        <!-- <a href="#reviews">Reviews</a> -->
+                        <a href="#contact">Contact</a>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -112,7 +122,7 @@
         <section id="hero">
             <div class="container-fluid">
                 <p class="hero-eyebrow">Hills District &amp; Greater Sydney</p>
-                <h2 class="hero-title">Plumbing done right, the first time.</h2>
+                <h2 class="hero-title">Plumbing done right.</h2>
                 <p class="hero-subtitle">Blocked drains, hot water systems, gas fitting, and everything in between &mdash; fast, friendly and fully licensed. Servicing Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and all of Sydney.</p>
                 <div class="hero-cta">
                     <a class="btn-cta" href="tel:0431964072"><i class="fa-solid fa-phone"></i> Call Jason Now</a>
@@ -616,6 +626,20 @@
         </footer>
         <script>
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            // The sticky header's height varies by screen size (the brand
+            // row wraps, and the mobile nav strip only exists below lg),
+            // so anchor-link scrolling needs a live measurement rather
+            // than a fixed offset to land section headings below it.
+            var topbar = document.getElementById('topbar');
+            var setHeaderHeight = function () {
+                document.documentElement.style.setProperty('--header-h', topbar.offsetHeight - 30 + 'px');
+            };
+            setHeaderHeight();
+            window.addEventListener('resize', setHeaderHeight);
+            if (window.ResizeObserver) {
+                new ResizeObserver(setHeaderHeight).observe(topbar);
+            }
         </script>
     </body>
 </html>

@@ -17,8 +17,10 @@
 
 html {
     /* Offsets anchor-link scrolling so section headings land below the
-       sticky header instead of underneath it. */
-    scroll-padding-top: 96px;
+       sticky header instead of underneath it. --header-h is measured
+       live in JS since the header's height changes with screen size
+       (brand row wraps; the mobile nav strip only exists below lg). */
+    scroll-padding-top: var(--header-h, 60px);
 }
 
 body {
@@ -35,12 +37,17 @@ a {
 /* ---------- Topbar ---------- */
 #topbar {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-    border-bottom: 4px solid var(--blue-light);
-    padding: 10px 0;
+    padding: 10px 0 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+/* Nav band: replaces the old 4px border-bottom accent with a full
+   bar in that same colour, and houses both the desktop and mobile
+   nav so the accent and the nav links are one visual unit. */
+#nav-band {
+    background: var(--blue-light);
 }
 #topbar .topbar-col {
     display: flex;
@@ -84,22 +91,23 @@ a {
     letter-spacing: 0.5px;
 }
 #main-nav {
-    display: flex;
+    width: 100%;
     gap: 22px;
-    justify-content: flex-end;
-    flex: 1;
+    justify-content: center;
 }
 #main-nav a {
-    color: var(--pale-blue);
+    color: var(--white);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
     text-decoration: none;
     font-family: 'Heebo', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    padding: 12px 8px;
     transition: color 0.2s ease;
 }
 #main-nav a:hover {
-    color: var(--white);
+    text-decoration: underline;
 }
 /* At lg+ the nav is visible and should always share the row with the
    brand and phone button rather than wrapping the button below. */
@@ -107,21 +115,98 @@ a {
     .topbar-row {
         flex-wrap: nowrap;
     }
-    .topbar-nav-col {
-        min-width: 0;
+}
+
+/* Below lg, #main-nav is hidden (d-none), so a second, always-visible
+   nav strip takes its place as a horizontally scrollable row of
+   one-tap links. It lives inside the sticky header so it stays
+   reachable from anywhere on the page without ever needing a menu
+   toggle. */
+#mobile-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 10px 0;
+    width: 100%;
+}
+#mobile-nav::-webkit-scrollbar {
+    display: none;
+}
+#mobile-nav a {
+    flex: 0 0 auto;
+    color: var(--white);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    background: rgba(16, 26, 86, 0.12);
+    border: 1px solid rgba(16, 26, 86, 0.2);
+    text-decoration: none;
+    font-family: 'Heebo', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+#mobile-nav a:active,
+#mobile-nav a:hover {
+    background: var(--navy-dark);
+}
+@media (min-width: 992px) {
+    #mobile-nav {
+        display: none;
     }
 }
-/* Between lg and xl there isn't quite enough room for the nav at its
-   full size, so tighten it up just in that range. */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+/* Below 500px there's no longer room for all 5 links on one
+   scrollable line, so wrap them into two centered rows of 3 and 2
+   instead (each link is fixed to a third of the width, so the third
+   naturally wraps to its own centered second row). */
+@media (max-width: 499.98px) {
+    #mobile-nav {
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+    #mobile-nav a {
+        flex: 0 0 calc((100% - 20px) / 3);
+        white-space: normal;
+        text-align: center;
+    }
+}
+/* Below lg the header now carries an extra row (the nav strip), so
+   trim the brand row's chrome to keep the sticky header from eating
+   too much of a phone's viewport. */
+@media (max-width: 991.98px) {
+    #topbar {
+        padding: 8px 0 0;
+    }
     #topbar .topbar-col {
-        padding: 6px 8px;
+        padding: 4px 10px;
     }
-    #main-nav {
-        gap: 10px;
+    .topbar-row {
+        padding-bottom: 8px;
     }
-    #main-nav a {
-        font-size: 12px;
+    .topbar-brand-row img {
+        height: 40px;
+        width: auto;
+    }
+    #topbar h1 {
+        font-size: 15px;
+    }
+    #topbar h2 {
+        font-size: 9px;
+    }
+    #mobile-nav {
+        padding: 8px 0;
+    }
+}
+/* Below 480px, the header's call button loses its label and becomes
+   an icon-only tap target so it doesn't crowd the brand. */
+@media (max-width: 479.98px) {
+    .topbar-phone-col .phone-number-text {
+        display: none;
     }
 }
 
