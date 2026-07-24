@@ -496,23 +496,124 @@ section {
     width: 100% !important;
     max-width: 100% !important;
 }
+
+/* Carousel shell: prev/next buttons flank a fixed-height viewport.
+   Because the viewport height never changes when a taller/shorter
+   embed becomes active, the buttons (vertically centered on that
+   fixed height) never shift position either. */
+.instagram-carousel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 520px;
+    margin: 0 auto;
+}
+.instagram-carousel-viewport {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: min(760px, 75vh);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+}
+.instagram-carousel-track {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+.instagram-item {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+    opacity: 0.4;
+    transform: scale(0.92);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    pointer-events: none;
+}
+/* The active slide is full size/opacity; its immediate neighbors
+   (loaded one step ahead purely for this preview) sit either side
+   in the filmstrip and peek in translucent, hinting more content. */
+.instagram-item.is-active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
 #instagram-container template {
     display: none;
 }
-.instagram-more-wrap {
-    text-align: center;
-    margin-top: 20px;
+@media (prefers-reduced-motion: reduce) {
+    .instagram-carousel-track,
+    .instagram-item {
+        transition: none;
+    }
 }
-/* Single column below md (mobile, unchanged). From md up to lg the
-   grid is still single column, so shrink+center each embed to ~50%
-   of the page instead of letting it stretch full-width. At xl the
-   grid switches to a real 2-up layout (col-xl-6), which already
-   gives each embed ~50% width, so the extra shrink is skipped there. */
-@media (min-width: 768px) and (max-width: 1199.98px) {
-    .box.instagram {
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
+
+.carousel-btn {
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--white);
+    color: var(--navy);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+}
+.carousel-btn svg {
+    width: 24px;
+    height: 24px;
+}
+.carousel-btn:hover:not(:disabled) {
+    background: var(--blue);
+    color: var(--white);
+    transform: scale(1.06);
+}
+.carousel-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+.instagram-carousel-counter {
+    text-align: center;
+    margin-top: 14px;
+    color: var(--navy);
+    font-weight: 600;
+}
+
+/* Desktop widens into a 3-up carousel: the previous/next embeds sit
+   fully visible (not cropped) at reduced opacity either side of the
+   active one, each taking an even third of the viewport. */
+@media (min-width: 768px) {
+    .instagram-carousel {
+        max-width: 1160px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .instagram-carousel {
+        gap: 6px;
+    }
+    .instagram-carousel-viewport {
+        height: min(760px, 82vh);
+    }
+    /* No peek on mobile: swiping is the primary way to browse here,
+       so a neighbor sliver would just be visual noise in the margin. */
+    .instagram-item:not(.is-active) {
+        opacity: 0;
+    }
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+    }
+    .carousel-btn svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
