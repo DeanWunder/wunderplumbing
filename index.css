@@ -54,25 +54,30 @@ a {
     align-items: center;
     padding: 6px 14px;
 }
-/* Brand and phone button size to their content and only wrap onto
-   their own line once they no longer both fit (rather than switching
-   at a fixed breakpoint), keeping the phone button pinned to the
-   right for as long as there's room. */
+/* The phone button is always pinned to the top right and never wraps
+   onto its own line, no matter how narrow the screen. The brand row
+   shrinks to make room for it instead, truncating its text with an
+   ellipsis rather than pushing the button down. */
 .topbar-row {
     justify-content: space-between;
-    row-gap: 6px;
+    flex-wrap: nowrap;
 }
-.topbar-brand-row,
+.topbar-brand-row {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 14px;
+}
 .topbar-phone-col {
     flex: 0 0 auto;
 }
-.topbar-brand-row {
-    gap: 14px;
+.topbar-brand-row img {
+    flex-shrink: 0;
 }
 .topbar-brand {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    min-width: 0;
+    flex: 1 1 auto;
 }
 #topbar h1 {
     color: var(--white);
@@ -81,6 +86,9 @@ a {
     text-transform: uppercase;
     font-size: 22px;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #topbar h2 {
     color: var(--pale-blue);
@@ -89,6 +97,9 @@ a {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #main-nav {
     width: 100%;
@@ -109,14 +120,12 @@ a {
 #main-nav a:hover {
     text-decoration: underline;
 }
-/* At lg+ the nav is visible and should always share the row with the
-   brand and phone button rather than wrapping the button below. */
-@media (min-width: 992px) {
-    .topbar-row {
-        flex-wrap: nowrap;
-    }
+/* Marks whichever link corresponds to the section currently in view
+   (kept in sync with scroll position via IntersectionObserver below). */
+#main-nav a.active {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
-
 /* Below lg, #main-nav is hidden (d-none), so a second, always-visible
    nav strip takes its place as a horizontally scrollable row of
    one-tap links. It lives inside the sticky header so it stays
@@ -152,7 +161,8 @@ a {
     transition: background 0.2s ease, color 0.2s ease;
 }
 #mobile-nav a:active,
-#mobile-nav a:hover {
+#mobile-nav a:hover,
+#mobile-nav a.active {
     background: var(--navy-dark);
 }
 @media (min-width: 992px) {
@@ -171,8 +181,18 @@ a {
     }
     #mobile-nav a {
         flex: 0 0 calc((100% - 20px) / 3);
-        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
         text-align: center;
+    }
+}
+/* Even narrower phones have less room per third-width link, so shrink
+   the label and padding too, to further reduce the chance labels get
+   truncated with an ellipsis. */
+@media (max-width: 399.98px) {
+    #mobile-nav a {
+        font-size: 10.5px;
+        padding: 6px 4px;
     }
 }
 /* Below lg the header now carries an extra row (the nav strip), so
@@ -254,7 +274,7 @@ a {
     background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
     color: var(--white);
     text-align: center;
-    padding: 90px 20px 100px;
+    padding: 40px 20px 50px;
     position: relative;
     overflow: hidden;
 }
@@ -292,6 +312,27 @@ a {
     gap: 18px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.hero-row {
+    padding: 20px 0;
+}
+/* The form keeps normal left-aligned text regardless of the
+   centered hero text-align, since it's a card, not hero copy. */
+.hero-contact-form {
+    text-align: left;
+}
+@media (min-width: 992px) {
+    .hero-copy {
+        text-align: left;
+    }
+    .hero-subtitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .hero-cta {
+        justify-content: flex-start;
+    }
 }
 
 /* ---------- Boxes / cards ---------- */

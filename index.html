@@ -121,12 +121,45 @@
 
         <section id="hero">
             <div class="container-fluid">
-                <p class="hero-eyebrow">Hills District &amp; Greater Sydney</p>
-                <h2 class="hero-title">Plumbing done right.</h2>
-                <p class="hero-subtitle">Blocked drains, hot water systems, gas fitting, and everything in between &mdash; fast, friendly and fully licensed. Servicing Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and all of Sydney.</p>
-                <div class="hero-cta">
-                    <a class="btn-cta" href="tel:0431964072"><i class="fa-solid fa-phone"></i> Call Jason Now</a>
-                    <a class="btn-cta btn-cta-outline" href="#contact"><i class="fa-regular fa-envelope"></i> Get a Free Quote</a>
+                <div class="row align-items-center hero-row">
+                    <div class="col-lg-6 hero-copy">
+                        <p class="hero-eyebrow">Hills District &amp; Greater Sydney</p>
+                        <h2 class="hero-title">Plumbing done right.</h2>
+                        <p class="hero-subtitle">Blocked drains, hot water systems, gas fitting, and everything in between &mdash; fast, friendly and fully licensed. Servicing Castle Hill, Kellyville, Rouse Hill, Hornsby, Galston, and all of Sydney.</p>
+                        <div class="hero-cta">
+                            <a class="btn-cta" href="tel:0431964072"><i class="fa-solid fa-phone"></i> Call Jason Now</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="box contact-form hero-contact-form" action="mailto:jason@wunderplumbing.com.au?subject=wunderplumbing.com.au%20Contact%20Form%20Submission" method="post" enctype="text/plain">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-name">Name</label>
+                                    <input type="text" class="form-control" id="contact-name" name="Name" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-phone">Phone</label>
+                                    <input type="tel" class="form-control" id="contact-phone" name="Phone" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input type="email" class="form-control" id="contact-email" name="Email" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="contact-suburb">Suburb</label>
+                                    <input type="text" class="form-control" id="contact-suburb" name="Suburb">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">How can we help?</label>
+                                <textarea class="form-control" id="contact-message" name="Message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-cta"><i class="fa-regular fa-envelope"></i> Get a Free Quote</button>
+                            <p class="contact-form-note">Clicking send will open your email app with your message pre-filled.</p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -558,7 +591,7 @@
         <section id="contact">
             <div class="container-fluid">
                 <h2 class="section-heading light">Get In Touch</h2>
-                <p class="section-subheading light">Send us your details and we'll get back to you as soon as we can.</p>
+                <p class="section-subheading light">Here's how to reach us &mdash; or send us your details below.</p>
                 <div class="row">
                     <div class="col-lg-5">
                         <ul class="contact-info">
@@ -573,29 +606,29 @@
                         <form class="box contact-form" action="mailto:jason@wunderplumbing.com.au?subject=wunderplumbing.com.au%20Contact%20Form%20Submission" method="post" enctype="text/plain">
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <label for="contact-name">Name</label>
-                                    <input type="text" class="form-control" id="contact-name" name="Name" required>
+                                    <label for="contact-name-2">Name</label>
+                                    <input type="text" class="form-control" id="contact-name-2" name="Name" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <label for="contact-phone">Phone</label>
-                                    <input type="tel" class="form-control" id="contact-phone" name="Phone" required>
+                                    <label for="contact-phone-2">Phone</label>
+                                    <input type="tel" class="form-control" id="contact-phone-2" name="Phone" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <label for="contact-email">Email</label>
-                                    <input type="email" class="form-control" id="contact-email" name="Email" required>
+                                    <label for="contact-email-2">Email</label>
+                                    <input type="email" class="form-control" id="contact-email-2" name="Email" required>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <label for="contact-suburb">Suburb</label>
-                                    <input type="text" class="form-control" id="contact-suburb" name="Suburb">
+                                    <label for="contact-suburb-2">Suburb</label>
+                                    <input type="text" class="form-control" id="contact-suburb-2" name="Suburb">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="contact-message">How can we help?</label>
-                                <textarea class="form-control" id="contact-message" name="Message" rows="4" required></textarea>
+                                <label for="contact-message-2">How can we help?</label>
+                                <textarea class="form-control" id="contact-message-2" name="Message" rows="4" required></textarea>
                             </div>
-                            <button type="submit" class="btn-cta">Send Message</button>
+                            <button type="submit" class="btn-cta"><i class="fa-regular fa-envelope"></i> Get a Free Quote</button>
                             <p class="contact-form-note">Clicking send will open your email app with your message pre-filled.</p>
                         </form>
                     </div>
@@ -641,12 +674,54 @@
             // than a fixed offset to land section headings below it.
             var topbar = document.getElementById('topbar');
             var setHeaderHeight = function () {
-                document.documentElement.style.setProperty('--header-h', topbar.offsetHeight + 'px');
+                document.documentElement.style.setProperty('--header-h', Math.max(topbar.offsetHeight - 30, 0) + 'px');
             };
             setHeaderHeight();
             window.addEventListener('resize', setHeaderHeight);
             if (window.ResizeObserver) {
                 new ResizeObserver(setHeaderHeight).observe(topbar);
+            }
+
+            // Keep the nav (both desktop and mobile) in sync with scroll
+            // position: whichever section is passing just below the sticky
+            // header gets its matching link darkened, the same way a tap
+            // would, so users always have their place in the page.
+            var navLinks = document.querySelectorAll('#main-nav a, #mobile-nav a');
+            var setActiveNav = function (id) {
+                navLinks.forEach(function (link) {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+                });
+            };
+            if (window.IntersectionObserver) {
+                var sectionIds = ['services', 'why-us', 'service-area', 'gallery', 'contact'];
+                var sections = sectionIds
+                    .map(function (id) { return document.getElementById(id); })
+                    .filter(Boolean);
+                var sectionObserver;
+                var observeSections = function () {
+                    if (sectionObserver) {
+                        sectionObserver.disconnect();
+                    }
+                    // The detection line sits just below the header; whichever
+                    // section is crossing it counts as the active one.
+                    var headerHeight = topbar.offsetHeight;
+                    var lineOffset = Math.max(window.innerHeight - headerHeight - 1, 1);
+                    sectionObserver = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                setActiveNav(entry.target.id);
+                            }
+                        });
+                    }, {
+                        rootMargin: '-' + (headerHeight + 1) + 'px 0px -' + lineOffset + 'px 0px',
+                        threshold: 0
+                    });
+                    sections.forEach(function (section) {
+                        sectionObserver.observe(section);
+                    });
+                };
+                observeSections();
+                window.addEventListener('resize', observeSections);
             }
         </script>
     </body>
