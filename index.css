@@ -34,6 +34,19 @@ a {
     color: var(--blue);
 }
 
+/* Bootstrap's reboot.scss sets button:focus { outline: 1px dotted; ... }
+   as a cross-browser fallback (most visible in Firefox). Swap it for a
+   :focus-visible ring instead of just deleting it, so keyboard users
+   still get a clear focus indicator without a stray dotted box on
+   mouse clicks. */
+button:focus {
+    outline: none;
+}
+button:focus-visible {
+    outline: 2px solid var(--blue-light);
+    outline-offset: 2px;
+}
+
 /* ---------- Topbar ---------- */
 #topbar {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
