@@ -327,6 +327,12 @@ button:focus-visible {
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
+.hero-licence {
+    font-size: 0.85em;
+    color: var(--pale-blue);
+    opacity: 0.7;
+    margin: -18px 0 0;
+}
 .hero-row {
     padding: 20px 0;
 }
